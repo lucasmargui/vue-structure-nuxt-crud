@@ -87,6 +87,15 @@ axiosApitClient configura uma instância do Axios com uma URL base e um intercep
 // pages/index.vue
 
 
+<div align="center">
+  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/b997c881-d4e5-4428-8281-cb2b1d03fb16" style="width:100%">
+</div>
+
+
+
+
+
+
 
 
 
