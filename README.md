@@ -91,6 +91,37 @@ axiosApitClient configura uma instância do Axios com uma URL base e um intercep
   <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/b997c881-d4e5-4428-8281-cb2b1d03fb16" style="width:100%">
 </div>
 
+## Create
+
+// pages/create.vue
+
+<div align="center">
+  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/083c4fc3-6af1-46db-a1a4-b2b314a996c8" style="width:100%">
+</div>
+
+
+## Edit
+
+// pages/edit/[id].vue
+
+<div align="center">
+  <h3>Get Project</h3>
+  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/fb407644-c5aa-412f-a418-3d1f54d5cafb" style="width:100%">
+</div>
+
+<br>
+
+<div align="center">
+   <h3>Update Project</h3>
+  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/d51c957a-4935-4f8b-99fa-e19505b39b12" style="width:100%">
+</div>
+
+
+
+
+
+
+
 
 
 
