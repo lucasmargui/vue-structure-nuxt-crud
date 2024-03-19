@@ -37,24 +37,6 @@ Acesse o endpoint https://mock-api.binaryboxtuts.com/ para resgatar a apiKey par
   <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/b84d51d0-3ebb-4db2-9f4a-8a11cdb54cdd" style="width:100%">
 </div>
 
-## Services
-
-- getProjects: Esta função é responsável por fazer uma requisição GET para obter todos os projetos da API. Ela utiliza o método $axiosApiClient.get() do Axios para fazer a requisição.
-
-- getProject: Esta função recebe um parâmetro id e faz uma requisição GET para obter um projeto específico da API. Ela utiliza o método $axiosApiClient.get() do Axios, passando o ID na URL da requisição.
-
-- createProject: Esta função recebe um objeto project como parâmetro e faz uma requisição POST para criar um novo projeto na API. Ela utiliza o método $axiosApiClient.post() do Axios, passando o objeto project como corpo da requisição.
-
-- updateProject: Esta função recebe dois parâmetros, o id do projeto que deve ser atualizado e um objeto project com os novos dados do projeto. Ela faz uma requisição PATCH para atualizar o projeto na API. Ela utiliza o método $axiosApiClient.patch() do Axios, passando o ID na URL da requisição e o objeto project como corpo da requisição.
-
-- deleteProject: Esta função recebe um parâmetro id e faz uma requisição DELETE para excluir um projeto da API. Ela utiliza o método $axiosApiClient.delete() do Axios, passando o ID na URL da requisição.
-
-
-
-<div align="center">
-  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/33da6096-5593-4372-bbcf-83047d8f8dc4" style="width:100%">
-</div>
-<br>
 
 ## Plugins
 
@@ -79,7 +61,26 @@ axiosApitClient configura uma instância do Axios com uma URL base e um intercep
 
 - return { provide: { axiosApiClient: axiosApiClient, }, };: Isso retorna um objeto que será fornecido pelo Nuxt para o aplicativo. Esse objeto fornece a instância customizada do Axios para o aplicativo, permitindo que o aplicativo acesse facilmente a instância do Axios configurada com as configurações necessárias.
 
+<br>
 
+## Services
+
+- getProjects: Esta função é responsável por fazer uma requisição GET para obter todos os projetos da API. Ela utiliza o método $axiosApiClient.get() do Axios para fazer a requisição.
+
+- getProject: Esta função recebe um parâmetro id e faz uma requisição GET para obter um projeto específico da API. Ela utiliza o método $axiosApiClient.get() do Axios, passando o ID na URL da requisição.
+
+- createProject: Esta função recebe um objeto project como parâmetro e faz uma requisição POST para criar um novo projeto na API. Ela utiliza o método $axiosApiClient.post() do Axios, passando o objeto project como corpo da requisição.
+
+- updateProject: Esta função recebe dois parâmetros, o id do projeto que deve ser atualizado e um objeto project com os novos dados do projeto. Ela faz uma requisição PATCH para atualizar o projeto na API. Ela utiliza o método $axiosApiClient.patch() do Axios, passando o ID na URL da requisição e o objeto project como corpo da requisição.
+
+- deleteProject: Esta função recebe um parâmetro id e faz uma requisição DELETE para excluir um projeto da API. Ela utiliza o método $axiosApiClient.delete() do Axios, passando o ID na URL da requisição.
+
+
+
+<div align="center">
+  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/33da6096-5593-4372-bbcf-83047d8f8dc4" style="width:100%">
+</div>
+<br>
 
 
 ## Read
