@@ -143,6 +143,24 @@ pages/index.vue
 
 
 
+## Resultado
+
+
+<div align="center">
+  <h3>Home</h3>
+  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/06a27802-20c8-4603-9ffb-6135333dd4b6" style="width:100%">
+  <br>
+  <h3>Delete</h3>
+  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/9eceb47a-146f-417a-ac25-1107617bd3b1" style="width:100%">
+  <br>
+  <h3>Operação realizada com sucesso</h3>
+  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/78dc091e-2a5d-4195-b352-23333db25d70" style="width:100%">
+</div>
+
+
+
+
+
 
 
 
