@@ -85,8 +85,11 @@ axiosApitClient configura uma instância do Axios com uma URL base e um intercep
 
 ## Read
 
-// pages/index.vue
+Read (Ler): Envolve a operação de recuperar ou ler dados existentes do sistema.
 
+```
+pages/index.vue
+```
 
 <div align="center">
   <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/b997c881-d4e5-4428-8281-cb2b1d03fb16" style="width:100%">
@@ -94,16 +97,24 @@ axiosApitClient configura uma instância do Axios com uma URL base e um intercep
 
 ## Create
 
-// pages/create.vue
+Create (Criar): Refere-se à operação de criar novos dados no sistema.
+
+```
+pages/create.vue
+```
 
 <div align="center">
   <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/083c4fc3-6af1-46db-a1a4-b2b314a996c8" style="width:100%">
 </div>
 
 
-## Edit
+## Update
 
-// pages/edit/[id].vue
+Update (Atualizar): Refere-se à operação de modificar ou atualizar dados existentes no sistema.
+
+```
+pages/edit/[id].vue
+```
 
 <div align="center">
   <h3>Get Project</h3>
@@ -116,6 +127,23 @@ axiosApitClient configura uma instância do Axios com uma URL base e um intercep
    <h3>Update Project</h3>
   <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/d51c957a-4935-4f8b-99fa-e19505b39b12" style="width:100%">
 </div>
+
+
+## Delete
+
+Delete (Apagar): Envolve a operação de remover dados existentes do sistema.
+
+```
+pages/index.vue
+```
+
+<div align="center">
+  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/af5380e1-1c86-414c-8c9f-66471f50ff46" style="width:100%">
+</div>
+
+
+
+
 
 
 
