@@ -1,14 +1,34 @@
-<H1 align="center">Estrutura Nuxt Crud</H1>
-<p align="center">🚀 Estrutura Nuxt Crud para referências futuras</p>
+
+<H1 align="center">Nuxt Crud Structure</H1>
+<p align="center">🚀 Nuxt Crud framework for future references</p>
 
 
-## Criação de projeto Nuxt
+
+## Requirements
+
+- Nuxt
+- bootstrap
+- sweetalert
+- axios
+
+<div align="center">
+ <h3>Home</h3>
+ <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/06a27802-20c8-4603-9ffb-6135333dd4b6" style="width:100%">
+ <br>
+ <h3>Delete</h3>
+ <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/9eceb47a-146f-417a-ac25-1107617bd3b1" style="width:100%">
+ <br>
+ <h3>Operation completed successfully</h3>
+ <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/78dc091e-2a5d-4195-b352-23333db25d70" style="width:100%">
+</div>
+
+## Create Nuxt project 
 
 ```
 npx nuxi@latest init vue-nuxt-crud
 ```
 
-## Adicionando pacotes 
+## Adding packages
 
 ```
 npm i bootstrap
@@ -17,145 +37,130 @@ npm i axios
 ```
 
 
+## Adding runtime configurations
 
-## Adicionando configurações runtime
-
-Acesse o endpoint https://mock-api.binaryboxtuts.com/ para resgatar a apiKey para ser utilizado nas requisições
+Access the endpoint https://mock-api.binaryboxtuts.com/ to redeem the apiKey to be used in requests
 
 
 <div align="center">
-  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/cfb5fa23-f34d-47b7-8e89-28a2f1eb19b1" style="width:100%">
+ <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/cfb5fa23-f34d-47b7-8e89-28a2f1eb19b1" style="width:100%">
 </div>
 
-### Configurando nuxt.config.ts
+### Configuring nuxt.config.ts
 
-- apiUrl: uma URL para uma API (Interface de Programação de Aplicativos) que o programa irá interagir. Neste caso, o programa está configurado para interagir com uma API localizada em https://mock-api.binaryboxtuts.com.
+- apiUrl: a URL to an API (Application Programming Interface) that the program will interact with. In this case, the program is configured to interact with an API located at https://mock-api.binaryboxtuts.com.
 
-- apiKey: Campo que será preenchido com a chave de API revelada para autenticação.
+- apiKey: Field that will be filled with the API key revealed for authentication.
 
 <div align="center">
-  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/b84d51d0-3ebb-4db2-9f4a-8a11cdb54cdd" style="width:100%">
+ <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/b84d51d0-3ebb-4db2-9f4a-8a11cdb54cdd" style="width:100%">
 </div>
 
 
 ## Plugins
 
-axiosApitClient configura uma instância do Axios com uma URL base e um interceptor de solicitação para adicionar um cabeçalho personalizado. Em seguida, ele fornece essa instância customizada do Axios para o aplicativo Nuxt, permitindo que o aplicativo faça solicitações HTTP configuradas com essas opções específicas.
+axiosApitClient configures an Axios instance with a base URL and a request interceptor to add a custom header. It then provides this custom Axios instance to the Nuxt application, allowing the application to make HTTP requests configured with these specific options.
 
 <br>
 <div align="center">
-  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/a88852c9-5f23-4f55-a8ed-e72c9c5a65be" style="width:100%">
+ <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/a88852c9-5f23-4f55-a8ed-e72c9c5a65be" style="width:100%">
 </div>
 
-- import axios from 'axios';: Isso importa a biblioteca Axios, que é uma biblioteca JavaScript usada para fazer solicitações HTTP a partir do navegador ou do Node.js.
+- import axios from 'axios';: This imports the Axios library, which is a JavaScript library used to make HTTP requests from the browser or Node.js.
 
-- export default defineNuxtPlugin((nuxtApp) => { ... });: Isso exporta um plugin Nuxt. O método defineNuxtPlugin é usado para definir um plugin Nuxt. Esse plugin recebe um argumento nuxtApp, que é a instância do aplicativo Nuxt.
+- export default defineNuxtPlugin((nuxtApp) => { ... });: This exports a Nuxt plugin. The defineNuxtPlugin method is used to define a Nuxt plugin. This plugin takes an argument nuxtApp, which is the Nuxt application instance.
 
-- const runctimeConfig = useRuntimeConfig(): Isso chama uma função useRuntimeConfig() para obter a configuração de tempo de execução do aplicativo. Presumivelmente, isso é usado para obter informações de configuração específicas do ambiente em que o aplicativo está sendo executado.
+- const runctimeConfig = useRuntimeConfig(): This calls a useRuntimeConfig() function to get the application's runtime configuration. Presumably this is used to obtain configuration information specific to the environment in which the application is running.
 
-- const axiosApiClient = axios.create(): Isso cria uma instância do Axios, que é uma instância customizada que pode ter configurações específicas.
+- const axiosApiClient = axios.create(): This creates an Axios instance, which is a custom instance that can have specific settings.
 
-- axiosApiClient.defaults.baseURL = runctimeConfig.public.apiUrl: Define a URL base para todas as solicitações feitas através dessa instância do Axios. A URL base é definida usando a configuração de tempo de execução apiUrl.
+- axiosApiClient.defaults.baseURL = runctimeConfig.public.apiUrl: Sets the base URL for all requests made through this Axios instance. The base URL is set using the apiUrl runtime configuration.
 
-- axiosApiClient.interceptors.request.use(function (config) { ... });: Isso adiciona um interceptor de solicitação ao Axios. Os interceptors são funções que são executadas antes de uma solicitação ser enviada. Neste caso, a função adiciona um cabeçalho personalizado X-Binarybox-Api-Key à solicitação, usando a chave API obtida da configuração de tempo de execução apiKey.
+- axiosApiClient.interceptors.request.use(function (config) { ... });: This adds a request interceptor to Axios. Interceptors are functions that are executed before a request is sent. In this case, the function adds a custom X-Binarybox-Api-Key header to the request, using the API key obtained from the apiKey runtime configuration.
 
-- return { provide: { axiosApiClient: axiosApiClient, }, };: Isso retorna um objeto que será fornecido pelo Nuxt para o aplicativo. Esse objeto fornece a instância customizada do Axios para o aplicativo, permitindo que o aplicativo acesse facilmente a instância do Axios configurada com as configurações necessárias.
+- return { provide: { axiosApiClient: axiosApiClient, }, };: This returns an object that will be provided by Nuxt to the application. This object provides the custom Axios instance to the application, allowing the application to easily access the Axios instance configured with the required settings.
 
 <br>
 
 ## Services
 
-- getProjects: Esta função é responsável por fazer uma requisição GET para obter todos os projetos da API. Ela utiliza o método $axiosApiClient.get() do Axios para fazer a requisição.
+- getProjects: This function is responsible for making a GET request to obtain all API projects. It uses Axios' $axiosApiClient.get() method to make the request.
 
-- getProject: Esta função recebe um parâmetro id e faz uma requisição GET para obter um projeto específico da API. Ela utiliza o método $axiosApiClient.get() do Axios, passando o ID na URL da requisição.
+- getProject: This function receives an id parameter and makes a GET request to obtain a specific project from the API. It uses Axios' $axiosApiClient.get() method, passing the ID in the request URL.
 
-- createProject: Esta função recebe um objeto project como parâmetro e faz uma requisição POST para criar um novo projeto na API. Ela utiliza o método $axiosApiClient.post() do Axios, passando o objeto project como corpo da requisição.
+- createProject: This function receives a project object as a parameter and makes a POST request to create a new project in the API. It uses the Axios $axiosApiClient.post() method, passing the project object as the request body.
 
-- updateProject: Esta função recebe dois parâmetros, o id do projeto que deve ser atualizado e um objeto project com os novos dados do projeto. Ela faz uma requisição PATCH para atualizar o projeto na API. Ela utiliza o método $axiosApiClient.patch() do Axios, passando o ID na URL da requisição e o objeto project como corpo da requisição.
+- updateProject: This function receives two parameters, the id of the project that should be updated and a project object with the new project data. It makes a PATCH request to update the project in the API. It uses Axios' $axiosApiClient.patch() method, passing the ID in the request URL and the project object as the request body.
 
-- deleteProject: Esta função recebe um parâmetro id e faz uma requisição DELETE para excluir um projeto da API. Ela utiliza o método $axiosApiClient.delete() do Axios, passando o ID na URL da requisição.
+- deleteProject: This function receives an id parameter and makes a DELETE request to delete a project from the API. It uses Axios' $axiosApiClient.delete() method, passing the ID in the request URL.
 
 
 
 <div align="center">
-  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/33da6096-5593-4372-bbcf-83047d8f8dc4" style="width:100%">
+ <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/33da6096-5593-4372-bbcf-83047d8f8dc4" style="width:100%">
 </div>
 <br>
 
-
 ## Read
 
-Read (Ler): Envolve a operação de recuperar ou ler dados existentes do sistema.
+Read: It involves the operation of retrieving or reading existing data from the system.
 
 ```
 pages/index.vue
 ```
 
 <div align="center">
-  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/b997c881-d4e5-4428-8281-cb2b1d03fb16" style="width:100%">
+ <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/b997c881-d4e5-4428-8281-cb2b1d03fb16" style="width:100%">
 </div>
 
 ## Create
 
-Create (Criar): Refere-se à operação de criar novos dados no sistema.
+Create: Refers to the operation of creating new data in the system.
 
 ```
 pages/create.vue
 ```
 
 <div align="center">
-  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/083c4fc3-6af1-46db-a1a4-b2b314a996c8" style="width:100%">
+ <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/083c4fc3-6af1-46db-a1a4-b2b314a996c8" style="width:100%">
 </div>
 
 
 ## Update
 
-Update (Atualizar): Refere-se à operação de modificar ou atualizar dados existentes no sistema.
+Update: Refers to the operation of modifying or updating existing data in the system.
 
 ```
 pages/edit/[id].vue
 ```
 
 <div align="center">
-  <h3>Get Project</h3>
-  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/fb407644-c5aa-412f-a418-3d1f54d5cafb" style="width:100%">
+ <h3>Get Project</h3>
+ <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/fb407644-c5aa-412f-a418-3d1f54d5cafb" style="width:100%">
 </div>
 
 <br>
 
 <div align="center">
-   <h3>Update Project</h3>
-  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/d51c957a-4935-4f8b-99fa-e19505b39b12" style="width:100%">
+ <h3>Update Project</h3>
+ <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/d51c957a-4935-4f8b-99fa-e19505b39b12" style="width:100%">
 </div>
 
 
 ## Delete
 
-Delete (Apagar): Envolve a operação de remover dados existentes do sistema.
+Delete: Involves the operation of removing existing data from the system.
 
 ```
 pages/index.vue
 ```
 
 <div align="center">
-  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/af5380e1-1c86-414c-8c9f-66471f50ff46" style="width:100%">
+ <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/af5380e1-1c86-414c-8c9f-66471f50ff46" style="width:100%">
 </div>
 
 
 
-## Resultado
-
-
-<div align="center">
-  <h3>Home</h3>
-  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/06a27802-20c8-4603-9ffb-6135333dd4b6" style="width:100%">
-  <br>
-  <h3>Delete</h3>
-  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/9eceb47a-146f-417a-ac25-1107617bd3b1" style="width:100%">
-  <br>
-  <h3>Operação realizada com sucesso</h3>
-  <img src="https://github.com/lucasmargui/Vue_Estrutura_Nuxt-Crud/assets/157809964/78dc091e-2a5d-4195-b352-23333db25d70" style="width:100%">
-</div>
 
 
 
